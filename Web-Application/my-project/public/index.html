@@ -22,7 +22,7 @@
     <div id="logo"></div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li>|</li>
         <li><a href="#whatis">About</a></li>
       </ul>
@@ -31,9 +31,9 @@
   </header>
 
   <div id="content">
-    
+
     <div id="heading">
-    
+
       <hgroup>
         <h1>
           Welcome to FlowTow!</h1>
@@ -59,9 +59,9 @@
       </div>
 
       <div id="post">
-          <div id="recent_post">
-            <script id="recent_picture_list" type="text/x-handlebars-template">
-              <h3>Recent posts</h3>
+        <div id="recent_post">
+          <script id="recent_picture_list" type="text/x-handlebars-template">
+            <h3>Recent posts</h3>
                         {{#each picture}}                        
                           <ul id="left">
                             <a id = "rencent_link" href="#!/posts/{{id}}">     
@@ -69,20 +69,17 @@
                                 <li class="p_caption">{{this.p_caption}}</li>
                                 <li class="p_author">by{{p_author.username}}</li>
                                 <li class="published_at">{{published_at}}</li>
-                                <li class="p_likes">{{p_likes}}</li>
-                                
+                                <li class="p_likes">{{p_likes}}</li>                               
                             </a>
-                                <button type="button" class="like_btn" postid = {{id}} like = {{p_likes}}>Like</button>
-                                
+                            <li class="like"> <button type="button" class="like_btn" postid = {{id}} like = {{p_likes}}>Like</button> </li>                        
                           </ul>                           
-                        {{/each}}
-             
+                        {{/each}}             
              </script>
-          </div>
+        </div>
 
-          <div id="popular_post">
-              <script id="popu_picture_list" type="text/x-handlebars-template">
-                <h3>Popular posts</h3>
+        <div id="popular_post">
+          <script id="popu_picture_list" type="text/x-handlebars-template">
+            <h3>Popular posts</h3>
                     {{#each picture}}
                       <ul id="left">
                             <a id = "rencent_link" href="#!/posts/{{id}}">  
@@ -90,30 +87,37 @@
                                 <li class="p_caption">{{this.p_caption}}</li>
                                 <li class="p_author">by{{p_author.username}}</li>
                                 <li class="published_at">{{published_at}}</li>
-                                <li class="p_likes">{{p_likes}}</li>
-                                
+                                <li class="p_likes">{{p_likes}}</li>                           
                             </a>    
-                                <button type="button" class="like_btn" postid = {{id}} like = {{p_likes}}>Like</button>
-                                
+                               <li class="like"><button type="button" class="like_btn" postid = {{id}} like = {{p_likes}}>Like</button>   </li>                           
                       </ul>   
                     {{/each}}
                 </script>
 
-          </div>
+        </div>
       </div>
-      <div id="whatis">
-         <h1>What is FlowTow?</h1>
-         <p>FlowTow is a new ,exciting,image sharing service like nothing you'be been seen before</p>
-         <p>FlowTow supports loggin in users,posting images, making comments and viewing images in various ways</p>
-      </div>
+
     </div>
-    
-    
-    
+    <div id="single_post">
+      <script id="single_post_view" type="text/x-handlebars-template">
+        <div id="postss">   
+             <div>{{picture.p_url}}</div>
+              <div>{{picture.p_caption}}</div>         
+              <div>{{picture.p_author.username}}</div>  
+              <div>{{picture.published_at}}</div> 
+              <img src={{picture.p_url}}></img>
+              <div>{{picture.p_likes}}</div>
+              <button class="like_btn" postid = {{picture.id}} like = {{picture.p_likes}}>like</button>
+          </div>    
+      </script>
+    </div>
   </div>
-
+  <div id="whatis">
+    <h1>What is FlowTow?</h1>
+    <p>FlowTow is a new ,exciting,image sharing service like nothing you'be been seen before</p>
+    <p>FlowTow supports loggin in users,posting images, making comments and viewing images in various ways</p>
+  </div>
   <footer>
-
     <div id="social">
       <ul>
         <li id="social-twitter"><a href="#">Twitter</a></li>
@@ -121,30 +125,13 @@
         <li id="social-instagram"><a href="#">Instagram</a></li>
       </ul>
     </div>
-
     <ul class="footer-tos">
       <li><a href="#">Terms</a></li>
       <li><a href="#">Privacy</a></li>
       <li><a href="#">Cookies</a></li>
     </ul>
-
     <p id="copyright">All content and images subject to copyright &copy; COMP2110/6110 FlowTow 2021.</p>
   </footer>
-  <div id = "single_post">
-    <script id = "single_post_view" type="text/x-handlebars-template">
-        <div id="postss">   
-           <div>{{picture.p_url}}</div>
-            <div>{{picture.p_caption}}</div>         
-            <div>{{picture.p_author.username}}</div>  
-            <div>{{picture.published_at}}</div> 
-            <img src={{picture.p_url}}></img>
-            <div>{{picture.p_likes}}</div>
-            <button>like</button>
-        </div>    
-    </script>
-  </div>
-
-  <!-- Templates -->
 
 </body>
 

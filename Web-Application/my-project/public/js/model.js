@@ -56,16 +56,17 @@ const Model = {
     
     
     // getPost - return a single post given its id
-    getPost: function(postUrl,id) {
-        fetch(postUrl+"/"+id).then((res)=>{
+    getPost: async function(postUrl,id) {
+       await fetch(postUrl+"/"+id).then((res)=>{
             return res.json()    
         }).then((data)=>{
-            console.log(data);
             const target = document.getElementById("single_post")
             const template = Handlebars.compile(document.getElementById("single_post_view").textContent)
             const div = template({'picture':data})
+            
             return target.innerHTML = div
         })
+        this.addLike()
     },
 
     setPosts: function(posts) {
@@ -89,11 +90,13 @@ const Model = {
     //      postId - is the id of the post
     // when the request is resolved, creates an "likeAdded" event
     addLike: function (postId) {
+     
         const btn = document.getElementsByClassName('like_btn')
         for(let i =0;i<btn.length;i++){
         btn[i].addEventListener('click',()=>{
               const id = btn[i].attributes["postid"].value
               let likes = parseInt(btn[i].attributes["like"].value)  
+              
               const dataset = {
                 "p_likes":likes+1
               }
@@ -163,14 +166,16 @@ const Model = {
         return popularData
     },
 
-    displayhash:function(){
+    displayhash: function(){
         const postUrl = 'http://localhost:1337/posts'
-        let urlHash = window.location.hash
-        let id = urlHash.substring(urlHash.length-1)
+        let id =0
+        const found = window.location.hash.match(/^#!\/posts\/(\d*)$/)
+        found && found.length === 2?id = found[1] :console.log("No Id Found")
         const hashurl = "#!/posts"+"/"+id
         if(window.location.hash===hashurl)
         {
             Model.getPost(postUrl,id)
+            
         }   
     }
 
