@@ -62,8 +62,7 @@ const Model = {
         }).then((data)=>{
             const target = document.getElementById("single_post")
             const template = Handlebars.compile(document.getElementById("single_post_view").textContent)
-            const div = template({'picture':data})
-            
+            const div = template({'picture':data})     
             return target.innerHTML = div
         })
         this.addLike()
@@ -131,7 +130,7 @@ const Model = {
         const data = this.data.posts
         const random = []
         for(let i =0;i<lenght;i++){
-            let index = parseInt(Math.random()*(12-0+1)+0)
+            let index = parseInt(Math.random()*(11-0+1)+0)
             random.push(data[index])
         }
         return random
@@ -155,7 +154,7 @@ const Model = {
                              return 0;
                          }
          })
-         return data
+         return recentData
     },
 
     // getPopularPosts - return the N most popular as an array

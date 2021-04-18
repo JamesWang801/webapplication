@@ -170,8 +170,9 @@ h3 {
 #left li img {
   height: 60rem;
   width: 60rem;
-  margin-left: -50rem;
+  /* margin-left: -50rem; */
 }
+
 
 .p_caption {
   line-height: 60rem;
@@ -208,15 +209,22 @@ h3 {
   text-align: center;
 }
 
-
 #content {
   position: relative;
 }
 
-#postss {
-  background: rgb(100, 84, 84);
+#Like {
+  background: rgb(207, 200, 200);
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
+  
+}
+
+#Like img {
+
+background-color: #01a3a4;
+
+
 }
