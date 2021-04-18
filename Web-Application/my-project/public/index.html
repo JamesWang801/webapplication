@@ -1,0 +1,140 @@
+<!--
+  Student Name:
+  Student Number:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FlowTow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <!-- Include Handlebars from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="./js/main.js" type=module defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div id="logo"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>|</li>
+        <li><a href="#whatis">About</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div id="content">
+    
+    <div id="heading">
+    
+      <hgroup>
+        <h1>Welcome to FlowTow</h1>
+      </hgroup>
+
+
+      <div id='pic_nav'>
+
+        <script id="nav_pic_list" type="text/x-handlebars-template">
+          {{#each picture}}
+          <a id = "rencent_link" href="#!/posts/{{id}}">    
+                      <div id="flowtow">
+                        <img src={{this.p_url}}></img>
+                        <span>{{this.p_author.username}}</span>
+                        <span>{{this.p_likes}}</span>
+                      </div>
+          </a>
+                         
+                      {{/each}}
+          </script>
+      </div>
+
+      <div id="post">
+          <div id="recent_post">
+            <script id="recent_picture_list" type="text/x-handlebars-template">
+              <h3>Recent posts</h3>
+                        {{#each picture}}                        
+                          <ul id="left">
+                            <a id = "rencent_link" href="#!/posts/{{id}}">     
+                                <li><img src={{this.p_url}}></img></li>
+                                <li class="p_caption">{{this.p_caption}}</li>
+                                <li class="p_author">by{{p_author.username}}</li>
+                                <li class="published_at">{{published_at}}</li>
+                                <li class="p_likes">{{p_likes}}</li>
+                            </a>
+                                <li class="like"><button class="like_btn" postid = {{id}} like = {{p_likes}}>Like</button></li>
+                          </ul>                           
+                        {{/each}}
+             
+             </script>
+          </div>
+
+          <div id="popular_post">
+              <script id="popu_picture_list" type="text/x-handlebars-template">
+                <h3>Popular posts</h3>
+                    {{#each picture}}
+                      <ul id="left">
+                            <a id = "rencent_link" href="#!/posts/{{id}}">  
+                                <li><img src={{this.p_url}}></img></li>
+                                <li class="p_caption">{{this.p_caption}}</li>
+                                <li class="p_author">by{{p_author.username}}</li>
+                                <li class="published_at">{{published_at}}</li>
+                                <li class="p_likes">{{p_likes}}</li>
+                            </a>    
+                                <li class="like"><button class="like_btn" postid = {{id}} like = {{p_likes}}>Like</button></li>
+                      </ul>   
+                    {{/each}}
+                </script>
+
+          </div>
+      </div>
+      <div id="whatis">
+         <h1>What is FlowTow?</h1>
+         <p>FlowTow is a new ,exciting,image sharing service like nothing you'be been seen before</p>
+         <p>FlowTow supports loggin in users,posting images, making comments and viewing images in various ways</p>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+
+  <footer>
+
+    <div id="social">
+      <ul>
+        <li id="social-twitter"><a href="#">Twitter</a></li>
+        <li id="social-facebook"><a href="#">Facebook</a></li>
+        <li id="social-instagram"><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <ul class="footer-tos">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+
+    <p id="copyright">All content and images subject to copyright &copy; COMP2110/6110 FlowTow 2021.</p>
+  </footer>
+  <div id = "single_post">
+    <script id = "single_post_view" type="text/x-handlebars-template">
+        <div id="postss">           
+            <div>{{picture.id}}</div>  
+            <img src={{picture.p_url}}></img>
+            <div>{{picture.p_likes}}</div>
+        </div>    
+    </script>
+  </div>
+
+  <!-- Templates -->
+
+</body>
+
+</html>

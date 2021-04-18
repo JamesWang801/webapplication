@@ -1,0 +1,200 @@
+/* please add your own style */
+
+/* sample spreadshet - you should replace all of this! */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    
+   
+    
+}
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size:0.05208vw;
+}
+header {
+    
+    height: 100rem;
+    background-color: #bdc3c7;
+    
+}
+header nav ul{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+header nav ul li{
+   margin: 35rem 0 0 20rem;
+   font-size: 20rem;
+   font-weight: 600;
+   color: #ecf0f1;
+   
+}
+header nav ul li a{
+    color: #ecf0f1;
+}
+
+#heading {
+    background-color: #dff9fb;
+}
+hgroup{
+    text-align: center;
+    font-size: 20rem;
+    background-color: white;
+    padding-bottom: 20rem;
+}
+
+#whatis {
+    
+
+    margin-top: 30rem;
+    background:linear-gradient(#48dbfb,#01a3a4);
+    padding: 20rem;
+}
+#whatis h1{
+    font-size: 30rem;
+    text-align: center;
+}
+#whatis p{
+    font-size: 15rem;
+    text-align: center;
+}
+
+
+footer {
+    margin-top: 60rem;
+    background-color: yellow;
+}
+
+#social ul{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+    
+}
+#social ul li{
+    margin-left: 100rem;
+}
+
+.footer-tos {
+    margin-top: 20rem;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+
+}
+.footer-tos li{
+    margin-left: 100rem;
+}
+
+#pic_nav{
+    border-bottom: 3px solid #c8d6e5;
+    display: flex;
+    justify-content:space-between;
+    overflow: hidden;
+    padding-bottom: 15rem;
+}
+
+#flowtow{
+    margin: 0 0 0 330rem;
+    position: relative;
+}
+#flowtow img{
+    margin-top: 20rem;
+    height: 200rem;
+    width: 200rem;
+}
+#flowtow span{
+   
+    margin-left: 50rem;
+   
+}
+
+#post{
+    overflow: hidden;
+}
+
+#recent_post{
+    float: left;
+    margin-left: 300rem;
+}
+
+#popular_post{
+    float: right;
+    margin-right: 300rem;
+}
+
+h3{
+    text-align: center;
+    font-size: 20rem;
+}
+
+#left{
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+#left li{
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    
+    
+}
+
+#left li img{
+    height: 60rem;
+    width: 60rem;
+    margin-left: -50rem;
+}
+.p_caption{
+  line-height: 60rem;
+ 
+  width: 160rem;
+}
+
+.p_author{
+    line-height: 60rem;
+    font-weight: bold;
+    width: 70rem;
+    text-align: center;   
+}
+.published_at{
+    
+    line-height: 60rem;
+    width: 210rem;
+}
+.p_likes{
+    
+    line-height: 60rem;
+    width: 30rem;
+    text-align: center;
+    font-weight: 600;
+    color: chocolate;
+}
+.like{
+    
+    line-height: 60rem;
+    width: 65rem;
+    text-align: center;
+}
+
+
+
+#postss{
+    background: rgb(100, 84, 84);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
