@@ -128,7 +128,7 @@ const Model = {
         const data = this.data.posts
         const random = []
         for(let i =0;i<lenght;i++){
-            let index = parseInt(Math.random()*(6-0+1)+0)
+            let index = parseInt(Math.random()*(12-0+1)+0)
             random.push(data[index])
         }
         return random

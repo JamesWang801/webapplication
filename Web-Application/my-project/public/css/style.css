@@ -106,16 +106,17 @@ footer {
     padding-bottom: 15rem;
 }
 
-#flowtow{
+.flowtow{
     margin: 0 0 0 330rem;
     position: relative;
 }
-#flowtow img{
+.flowtow img{
     margin-top: 20rem;
     height: 200rem;
     width: 200rem;
 }
-#flowtow span{
+
+.flowtow span{
    
     margin-left: 50rem;
    
