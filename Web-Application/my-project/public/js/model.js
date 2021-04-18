@@ -95,7 +95,7 @@ const Model = {
               const id = btn[i].attributes["postid"].value
               let likes = parseInt(btn[i].attributes["like"].value)  
               const dataset = {
-                "p_likes":6
+                "p_likes":likes+1
               }
              fetch('http://localhost:1337/posts/'+id,{
                  method:'PUT',
@@ -106,6 +106,7 @@ const Model = {
              }
              ).then((res)=>{
                  this.getPosts()
+                 location.reload()
                
              })
          })
