@@ -99,6 +99,9 @@ const Model = {
               }
              fetch('http://localhost:1337/posts/'+id,{
                  method:'PUT',
+                 headers: {
+                    "Content-Type": "application/json"
+                    }, 
                  body:JSON.stringify(dataset)
              }
              ).then((res)=>{
