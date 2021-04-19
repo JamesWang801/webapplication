@@ -178,4 +178,20 @@ const Model = {
         }   
     }
 
+    // login:function(){
+    //     const btn = document.getElementById('login')
+    //     btn.addEventListener('click',()=>{
+    //         let username = document.getElementById("username").value
+    //         let password = document.getElementById("password").value
+    //         const logindata = {
+    //             username,
+    //             password
+    //         }
+
+            
+    //     })
+    // }
+
+
+
 }

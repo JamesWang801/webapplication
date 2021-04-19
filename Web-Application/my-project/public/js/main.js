@@ -1,4 +1,5 @@
 import { Model } from "./model.js"
+import { Auth } from "./service.js"
 import { listView} from "./util.js"
 
 /*
@@ -21,6 +22,9 @@ async function redraw() {
     listView("popular_post","popu_picture_list",data)
     Model.displayhash()
     Model.addLike()
+    Auth.login() //
+    
+     
 }
 
 
