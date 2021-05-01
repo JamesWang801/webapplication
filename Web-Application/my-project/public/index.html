@@ -25,14 +25,27 @@
         <li><a href="./index.html">Home</a></li>
         <li>|</li>
         <li><a href="#whatis">About</a></li>
+        <li><a href="#!/all-posts">All-Posts</a></li>
+        <li><a href="#!/my-posts">My-Posts</a></li>
       </ul>
     </nav>
-    <form id = 'loginform'>
-      <input id = "username" type="text" id = "username"/>
-      <input id = "password" type="password" id = "password"/>
-      <button id = "login">Login</button>
-    </form>
+
+    <div id="login_form">
+      <script id="login_template" type="text/x-handlebars-template">
+
+        {{#if picture}}
+               <div>Logged in as {{picture.user.username}}</div>
+          {{else}} 
+              <input id = "username" type="text" id = "username"/>
+              <input id = "password" type="password" id = "password"/>
+              <button id = "login">Login</button>
+          {{/if}}
+          </script>
+
     </div>
+    </div>
+
+
 
   </header>
 
@@ -104,6 +117,8 @@
       </div>
 
     </div>
+
+
     <div id="single_post">
       <script id="single_post_view" type="text/x-handlebars-template">
         <div id="Like">   
@@ -117,7 +132,48 @@
           </div>    
       </script>
     </div>
+
+    <div id="my_post">
+      <script id="my_post_view" type="text/x-handlebars-template">
+        <div id="my_post_div">   
+          {{#if picture}}
+                {{#each picture}}
+                    <div id = 'my_post_box'>
+                      <img src={{this.p_url}}></img>
+                      <div>{{this.p_caption}}</div>
+                      <div>{{this.published_at}}</div>
+                      <div>{{p_likes}}</div>
+                    </div>
+                {{/each}}
+          {{else}} 
+              <h1>You have to login first</h1>
+          {{/if}}
+        </div>    
+      </script>
+    </div>
+
+    <div id="all_post">
+      <script id="all_post_view" type="text/x-handlebars-template">
+        <div id = "all_post_div">
+                <div id = 'all_post_box'>
+                     {{#each picture}}
+                        <div id = "m_post">
+                          <img src={{this.p_url}}></img>
+                       <div>{{this.p_caption}}</div>
+                       <div>{{this.p_author.username}}</div>
+                       <div>{{this.published_at}}</div> 
+                        </div>
+                       
+                     {{/each}}
+                </div>
+            </div>         
+      </script>
+    </div>
+
+
   </div>
+
+
   <div id="whatis">
     <h1>What is FlowTow?</h1>
     <p>FlowTow is a new ,exciting,image sharing service like nothing you'be been seen before</p>

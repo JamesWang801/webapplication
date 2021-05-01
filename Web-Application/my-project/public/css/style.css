@@ -211,6 +211,7 @@ h3 {
 
 #content {
   position: relative;
+  
 }
 
 #Like {
@@ -227,4 +228,41 @@ h3 {
 background-color: #01a3a4;
 
 
+}
+
+#my_post_div{
+  background-color: #b5c4c4;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  
+}
+
+#all_post_div{
+  overflow: hidden;
+  background-color: #929999;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  
+}
+
+#all_post_box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+
+#m_post{
+  height: 300rem;
+  width: 300rem;
+  border: 1px solid black;
+}
+#m_post img{
+  height: 200rem;
+  width: 210rem;
+  
 }
